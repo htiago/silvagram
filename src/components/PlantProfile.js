@@ -6,11 +6,18 @@ app.component('plant-profile', {
   template: 
   /*html*/
   `
-  <span>{{text}}</span>
+  <div class="pic-container">
+    <img :src="imageLink" class="profile-pic">
+    <h3>{{plantName}}</h3>
+  </div>
   `,
   computed: {
-    text() {
-      return this.plants[1]
+    imageLink() {
+      // assume this is being called from index.html
+      return "../assets/" + this.plants[this.plantIndex].name + ".jpg"
+    },
+    plantName(){
+      return this.plants[this.plantIndex].name
     }
   }
 })
