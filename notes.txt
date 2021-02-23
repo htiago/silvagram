@@ -1,0 +1,3 @@
+Implemented select element in index.html for changing current plant. 
+With v-model, binding to plantIndex. If plantIndex changed, then currentPlant() 
+is automatically recomputed. (currentPlant is bound to PlantProfile prop.)

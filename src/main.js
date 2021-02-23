@@ -6,13 +6,7 @@ const app = Vue.createApp({
         {id: 1, name: "Boston-Fern", description: ""},
         {id: 2, name: "Monstera-Deliciosa", description: ""}
       ],
-      plantIndex: 0,
-      selectedPlant: ''
-    }
-  },
-  methods: {
-    changeCurrentPlant() {
-      this.plantIndex = this.selectedPlant.id
+      plantIndex: 1,
     }
   },
   computed: {

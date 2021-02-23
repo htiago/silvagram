@@ -14,8 +14,8 @@
     <plant-profile :plant="currentPlant"></plant-profile>
   
     <div id="select-plant">
-      <select v-model="selectedPlant"  @change="changeCurrentPlant">
-        <option v-for="plant in plants" :value="plant">
+      <select v-model="plantIndex">
+        <option v-for="plant in plants" :value="plant.id">
           {{plant.name}}
         </option>
       </select>
