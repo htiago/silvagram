@@ -1,7 +1,6 @@
 app.component('plant-profile', {
   props: {
-    plants: Array,
-    plantIndex: Number 
+    plant: Object
   },
   template: 
   /*html*/
@@ -14,10 +13,10 @@ app.component('plant-profile', {
   computed: {
     imageLink() {
       // assume this is being called from index.html
-      return "../assets/" + this.plants[this.plantIndex].name + ".jpg"
+      return "../assets/" + this.plant.name + ".jpg"
     },
     plantName(){
-      return this.plants[this.plantIndex].name
+      return this.plant.name
     }
   }
 })

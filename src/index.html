@@ -9,10 +9,20 @@
 </head>
 
 <body>
+  
   <div id="app">
-    <plant-profile :plants="plants" :plant-index="plantIndex"></plant-profile>
-  </div>
+    <plant-profile :plant="currentPlant"></plant-profile>
+  
+    <div id="select-plant">
+      <select v-model="selectedPlant"  @change="changeCurrentPlant">
+        <option v-for="plant in plants" :value="plant">
+          {{plant.name}}
+        </option>
+      </select>
+    </div>
 
+  </div>
+  
   <!-- import main.js -->
   <script src="./main.js"></script>
 
